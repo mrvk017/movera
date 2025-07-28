@@ -273,6 +273,104 @@ const AboutUs = () => {
           <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-8">
             Our Dedicated <span className="text-emerald-600">&</span> Experienced Therapist Team
           </h2>
+
+          {/* Team Members Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-16">
+            {/* N Saquib Lachoo */}
+            <div className="text-center group">
+              <div 
+                className="relative mb-6 overflow-hidden rounded-3xl"
+                style={{
+                  transform: `translateY(${scrollY * 0.05}px)`
+                }}
+              >
+                <img
+                  src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+                  alt="N Saquib Lachoo"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-4 left-4 w-16 h-16 bg-emerald-400 rounded-2xl opacity-80"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">N Saquib Lachoo</h3>
+              <p className="text-gray-600 text-sm">Founder</p>
+            </div>
+
+            {/* Dr. Soumyendro Chatterjee */}
+            <div className="text-center group">
+              <div 
+                className="relative mb-6 overflow-hidden rounded-3xl"
+                style={{
+                  transform: `translateY(${scrollY * 0.08}px)`
+                }}
+              >
+                <img
+                  src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+                  alt="Dr. Soumyendro Chatterjee"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-4 left-4 w-16 h-16 bg-gray-300 rounded-2xl opacity-80"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Dr. Soumyendro Chatterjee</h3>
+              <p className="text-gray-600 text-sm">Clinical Advisor / Consultant</p>
+            </div>
+
+            {/* Ankit Mathur */}
+            <div className="text-center group">
+              <div 
+                className="relative mb-6 overflow-hidden rounded-3xl"
+                style={{
+                  transform: `translateY(${scrollY * 0.06}px)`
+                }}
+              >
+                <img
+                  src="https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+                  alt="Ankit Mathur"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-4 left-4 w-16 h-16 bg-white rounded-2xl opacity-80"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Ankit Mathur</h3>
+              <p className="text-gray-600 text-sm">Advisor / Investor</p>
+            </div>
+
+            {/* Dr Deepanshu Khatri */}
+            <div className="text-center group">
+              <div 
+                className="relative mb-6 overflow-hidden rounded-3xl"
+                style={{
+                  transform: `translateY(${scrollY * 0.07}px)`
+                }}
+              >
+                <img
+                  src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+                  alt="Dr Deepanshu Khatri"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-4 left-4 w-16 h-16 bg-emerald-400 rounded-2xl opacity-80"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Dr Deepanshu Khatri</h3>
+              <p className="text-gray-600 text-sm">Head Operations</p>
+            </div>
+
+            {/* Dr Natasha Saleem - PT */}
+            <div className="text-center group">
+              <div 
+                className="relative mb-6 overflow-hidden rounded-3xl"
+                style={{
+                  transform: `translateY(${scrollY * 0.09}px)`
+                }}
+              >
+                <img
+                  src="https://images.pexels.com/photos/5327647/pexels-photo-5327647.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+                  alt="Dr Natasha Saleem"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-4 left-4 w-16 h-16 bg-gray-200 rounded-2xl opacity-80"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Dr Natasha Saleem - PT</h3>
+              <p className="text-gray-600 text-sm">Head - Clinical Process</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
