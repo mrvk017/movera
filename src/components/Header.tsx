@@ -10,28 +10,28 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Left Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="#" className="flex items-center text-gray-700 hover:text-emerald-600 transition-colors">
-              Home
-            </a>
-            <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors">About us</a>
-            <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors">Services</a>
-            <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors">Pages</a>
-          </nav>
-
           {/* Logo */}
-          <div className="flex-1 lg:flex-none flex justify-center">
+          {/* <div className="flex-1 lg:flex-none flex justify-center">
+          </div> */}
+            <a href="/home" className="flex items-center text-gray-700 hover:text-emerald-600 transition-colors">
+              {/* Home */}
             <img 
-              src="/logo.png" 
+              src="/logo1.png" 
               alt="Miss Spa Logo" 
-              className="h-12 w-auto"
+              className="h-14 w-auto"
             />
-          </div>
-
+            </a>
+            <a href="/aboutUs" className="text-gray-700 hover:text-emerald-600 transition-colors">About us</a>
+            <a href="/services" className="text-gray-700 hover:text-emerald-600 transition-colors">Services</a>
+            <a href="/pages" className="text-gray-700 hover:text-emerald-600 transition-colors">Pages</a>
+            <a href="/blog" className="text-gray-700 hover:text-emerald-600 transition-colors">Blog</a>
+            <a href="/contactUs" className="text-gray-700 hover:text-emerald-600 transition-colors">Contact Us</a>
+          </nav>
           {/* Right Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors">Blog</a>
-            <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors">Contact Us</a>
           </nav>
+
+
 
           {/* Search and CTA */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -41,11 +41,11 @@ const Header = () => {
             <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors text-sm font-medium">
               Book an Appointment
             </button>
-            <div className="flex space-x-2">
+            {/* <div className="flex space-x-2">
               <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
               <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
               <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile Menu Button */}
