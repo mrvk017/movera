@@ -1,36 +1,44 @@
-import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import React from "react";
+import { ArrowUp } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
-      title: "REIKI THERAPY",
-      image: "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      description: "Odio facilisis mauris sit amet massa vitae tortor condimentum urna nunc...",
-      duration: "30 MINS",
-      price: "$39"
+      title: "Postural & Spinal Alignment Therapy",
+      image:
+        "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      description:
+        "Focused therapy to correct spinal misalignments and poor posture using manual techniques and personalized exercises.",
+      duration: "45–60 minutes",
+      price: "₹800",
     },
     {
-      title: "BODY MASSAGE",
-      image: "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      description: "Volutpat commodo sed odio pellentesque diam egestas egestas fringilla amet.",
-      duration: "1 HR",
-      price: "$49"
+      title: "Musculoskeletal Pain Management",
+      image:
+        "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      description:
+        "Volutpat commodo sed odio pellentesque diam egestas egestas fringilla amet.",
+      duration: "60 minutes",
+      price: "₹1,000",
     },
     {
-      title: "CRANIOSACRAL THERAPY",
-      image: "https://images.pexels.com/photos/3757941/pexels-photo-3757941.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      description: "Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor quis viverra.",
-      duration: "45 MINS",
-      price: "$32"
+      title: "Sports Injury Rehabilitation",
+      image:
+        "https://images.pexels.com/photos/3757941/pexels-photo-3757941.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      description:
+        "Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor quis viverra.",
+      duration: "60–75 minutes",
+      price: "₹1,200",
     },
     {
-      title: "MYOFASCIAL MASSAGE",
-      image: "https://images.pexels.com/photos/3757943/pexels-photo-3757943.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      description: "Sed turpis tincidunt id aliquet risus feugiat in malesuada fames ac...",
-      duration: "45 MINS",
-      price: "$20"
-    }
+      title: "Neurophysiotherapy for Stroke & Nerve Disorders",
+      image:
+        "https://images.pexels.com/photos/3757943/pexels-photo-3757943.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      description:
+        "Sed turpis tincidunt id aliquet risus feugiat in malesuada fames ac...",
+      duration: "75 minutes",
+      price: "₹1,500",
+    },
   ];
 
   return (
@@ -52,7 +60,7 @@ const ServicesSection = () => {
             COMPLETE WELLNESS
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Eros donec ac odio tempor. Id interdum velit laoreet id donec 
+            Eros donec ac odio tempor. Id interdum velit laoreet id donec
             ultrices tincidunt arcu non. Viverra orci sagittis volutpat.
           </p>
         </div>
@@ -60,7 +68,7 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {services.map((service, index) => (
-            <div key={index} className="text-center group">
+            <div key={index} className="text-center group relative">
               {/* Service Image */}
               <div className="relative mb-8">
                 <div className="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
@@ -70,15 +78,13 @@ const ServicesSection = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                
-                {/* Arrow icon for third service */}
-                {index === 2 && (
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
-                      <ArrowUp className="w-5 h-5 text-gray-600" />
-                    </div>
+
+                {/* Show Arrow on Hover */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
+                    <ArrowUp className="w-5 h-5 text-gray-600" />
                   </div>
-                )}
+                </div>
               </div>
 
               {/* Service Content */}
@@ -86,19 +92,19 @@ const ServicesSection = () => {
                 <h3 className="text-xl font-medium text-gray-800 tracking-wide">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-gray-600 text-sm leading-relaxed px-4">
                   {service.description}
                 </p>
 
                 {/* Duration and Price */}
-                <div className="flex justify-between items-center text-sm text-gray-500 px-4">
+                <div className="flex flex-col justify-between items-center text-sm text-gray-500 px-4">
                   <div>
-                    <span className="uppercase tracking-wider">Duration : </span>
+                    <span className="uppercase tracking-wider">Duration: </span>
                     <span className="font-medium">{service.duration}</span>
                   </div>
                   <div>
-                    <span className="uppercase tracking-wider">Price : </span>
+                    <span className="uppercase tracking-wider">Price: </span>
                     <span className="font-medium">{service.price}</span>
                   </div>
                 </div>
