@@ -1,50 +1,41 @@
-import React from 'react';
-import { Heart, Globe, Zap, Smile, MessageCircle, Phone } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { Heart, Globe, Zap, Smile, MessageCircle, Phone } from "lucide-react";
+import RotatingPlayButton from "./RotatingPlayButton";
+import YouTube from "react-youtube";
+import ParallaxBackground from "./ParallaxBackground";
 
 const WellnessSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const benefits = [
     {
       icon: Heart,
-      title: "HELPS RELIEVE PAIN"
+      title: "Relieves Muscle & Joint Pain",
     },
     {
       icon: Globe,
-      title: "REDUCE BODY STRESS"
+      title: "Reduces Body Stress",
     },
     {
       icon: Zap,
-      title: "EASE CHRONIC PAIN"
+      title: "Eases Chronic Discomfort",
     },
     {
       icon: Smile,
-      title: "BOOSTS YOUR MOOD"
-    }
+      title: "Lifts Mood & Improves Energy",
+    },
   ];
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isOpen]);
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Flowing organic shapes */}
-        <div className="absolute top-20 left-0 w-96 h-96 opacity-10">
-          <svg viewBox="0 0 400 400" className="w-full h-full">
-            <path
-              d="M50,200 Q100,50 200,100 T350,200 Q300,350 200,300 T50,200"
-              fill="none"
-              stroke="#10b981"
-              strokeWidth="2"
-            />
-          </svg>
-        </div>
-        
-        {/* Scattered dots */}
-        <div className="absolute top-32 right-20 w-3 h-3 bg-emerald-300 rounded-full opacity-60"></div>
-        <div className="absolute top-64 right-40 w-2 h-2 bg-emerald-400 rounded-full opacity-50"></div>
-        <div className="absolute bottom-40 left-32 w-4 h-4 bg-emerald-200 rounded-full opacity-40"></div>
-        <div className="absolute bottom-60 right-60 w-3 h-3 bg-emerald-300 rounded-full opacity-60"></div>
-        <div className="absolute top-1/2 left-20 w-2 h-2 bg-emerald-400 rounded-full opacity-50"></div>
-        <div className="absolute bottom-32 right-20 w-5 h-5 bg-emerald-200 rounded-full opacity-30"></div>
-      </div>
+      <ParallaxBackground />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -55,7 +46,7 @@ const WellnessSection = () => {
               <img
                 src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
                 alt="Spa massage therapy"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                className="w-full h-100 object-cover rounded-2xl shadow-lg"
               />
             </div>
 
@@ -79,32 +70,51 @@ const WellnessSection = () => {
 
             {/* Decorative spa logo overlay */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
-              <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                  <div className="text-emerald-600 font-bold text-sm">MS</div>
-                </div>
-              </div>
+              <RotatingPlayButton setIsOpen={setIsOpen} />
             </div>
           </div>
+          {/* Modal */}
+          {isOpen && (
+            <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-20">
+              <div className="relative w-full max-w-4xl aspect-video">
+                <button
+                  className="absolute -top-20 -right-44 text-white text-2xl bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600"
+                  onClick={() => setIsOpen(false)}
+                >
+                  &times;
+                </button>
+                <YouTube
+                  videoId="clzuRgaV5dw" // Change to your video ID
+                  className="w-full h-full"
+                  opts={{
+                    width: "100%",
+                    height: "100%",
+                    playerVars: {
+                      autoplay: 1,
+                    },
+                  }}
+                />
+              </div>
+            </div>
+          )}
 
           {/* Right side - Content */}
           <div className="space-y-8">
             {/* Header */}
             <div>
               <p className="text-sm text-gray-500 uppercase tracking-wider mb-4">
-                Solution For Body Needs
+                Your Body, Your Healing Partner
               </p>
               <h2 className="text-4xl md:text-5xl font-light text-gray-800 tracking-wider mb-6 leading-tight">
-                BUILDING PHYSICALLY & MENTAL
-                <br />
-                <span className="text-emerald-600">HEALTH</span>
+                REBUILDING YOUR STRENGTH & PEACE OF
+                {/* <br /> */}
+                <span className="text-emerald-600">MIND</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Nunc id cursus metus aliquam eleifend mi in nulla posuere. Lorem mollis 
-                aliquam ut porttitor. Facilisis leo vel fringilla est ullamcorper eget. Odio 
-                ut enim blandit volutpat maecenas volutpat. Vulputate dignissim 
-                suspendisse in est ante in nibh mauris cursus. Ut consequat semper 
-                viverra nam libero justo aliquam etiam erat velit.
+                At Movera, we focus on real healing — not just temporary relief.
+                Whether you're recovering from injury, managing pain, or dealing
+                with stress, our expert therapists are here to help you move
+                better, feel better, and live better.
               </p>
             </div>
 
@@ -130,18 +140,27 @@ const WellnessSection = () => {
               <button className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors text-sm font-medium tracking-wide">
                 Know More
               </button>
-              
+
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
                   <MessageCircle className="w-5 h-5 text-gray-600" />
                 </div>
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">Chat Us Anytime</p>
-                  <p className="text-sm font-medium text-gray-700 flex items-center">
-                    <Phone className="w-3 h-3 mr-1" />
-                    +00 123 456 789
-                  </p>
-                </div>
+                <a
+                  href="https://wa.me/919201147341"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div>
+                    <p className="text-sm text-gray-500 mb-1">
+                      Chat Us Anytime
+                    </p>
+                    <p className="text-sm font-medium text-gray-700 flex items-center">
+                      <Phone className="w-3 h-3 mr-1" />
+                      +91 9201147341
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -152,3 +171,51 @@ const WellnessSection = () => {
 };
 
 export default WellnessSection;
+
+{
+  /* <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg"> */
+}
+{
+  /* <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+  <div className="text-emerald-600 font-bold text-sm">MS</div>
+  </div> */
+}
+{
+  /* </div> */
+}
+{
+  /* Background decorative elements */
+}
+{
+  /* <div className="absolute inset-0 pointer-events-none"> */
+}
+{
+  /* Flowing organic shapes */
+}
+{
+  /* <div className="absolute top-20 left-0 w-96 h-96 opacity-10">
+          <svg viewBox="0 0 400 400" className="w-full h-full">
+            <path
+              d="M50,200 Q100,50 200,100 T350,200 Q300,350 200,300 T50,200"
+              fill="none"
+              stroke="#10b981"
+              strokeWidth="2"
+            />
+          </svg>
+        </div> */
+}
+
+{
+  /* Scattered dots */
+}
+{
+  /* <div className="absolute top-32 right-20 w-3 h-3 bg-emerald-300 rounded-full opacity-60"></div>
+        <div className="absolute top-64 right-40 w-2 h-2 bg-emerald-400 rounded-full opacity-50"></div>
+        <div className="absolute bottom-40 left-32 w-4 h-4 bg-emerald-200 rounded-full opacity-40"></div>
+        <div className="absolute bottom-60 right-60 w-3 h-3 bg-emerald-300 rounded-full opacity-60"></div>
+        <div className="absolute top-1/2 left-20 w-2 h-2 bg-emerald-400 rounded-full opacity-50"></div>
+        <div className="absolute bottom-32 right-20 w-5 h-5 bg-emerald-200 rounded-full opacity-30"></div> */
+}
+{
+  /* </div> */
+}

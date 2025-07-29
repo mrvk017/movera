@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Search, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import NavLinkWithImage from "./NavLinkWithImage";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,21 +12,23 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Left Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {/* Logo */}
-            {/* <div className="flex-1 lg:flex-none flex justify-center">
-          </div> */}
             <Link
               to="/home"
               className="flex items-center text-gray-700 hover:text-emerald-600 transition-colors"
             >
-              {/* Home */}
               <img
                 src="/logo1.png"
                 alt="Miss Spa Logo"
                 className="h-14 w-auto"
               />
             </Link>
-            <Link
+            <NavLinkWithImage to="/aboutUs" label="About us" image="/powCopy.png" />
+            <NavLinkWithImage to="/services" label="Services" image="/powCopy.png" />
+            <NavLinkWithImage to="/Pages" label="Pages" image="/powCopy.png" />
+            <NavLinkWithImage to="/blog" label="Blog" image="/powCopy.png" />
+            <NavLinkWithImage to="/contactUs" label="Contact Us" image="/powCopy.png" />
+
+            {/* <Link
               to="/aboutUs"
               className="text-gray-700 hover:text-emerald-600 transition-colors"
             >
@@ -54,7 +57,7 @@ const Header = () => {
               className="text-gray-700 hover:text-emerald-600 transition-colors"
             >
               Contact Us
-            </Link>
+            </Link> */}
           </nav>
           {/* Right Navigation */}
           <nav className="hidden lg:flex items-center space-x-8"></nav>
@@ -67,11 +70,6 @@ const Header = () => {
             <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors text-sm font-medium">
               Book an Appointment
             </button>
-            {/* <div className="flex space-x-2">
-              <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
-              <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-              <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
-            </div> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -139,3 +137,11 @@ const Header = () => {
 };
 
 export default Header;
+
+{
+  /* <div className="flex space-x-2">
+  <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+  <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+  <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
+</div> */
+}
