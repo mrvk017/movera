@@ -9,19 +9,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "../../public/hero_img.png",
+    image: "/hero_img.png",
     title: "PHYSIOTHERAPY",
     subtitle: "ASSESSSMENT",
     buttonText: "Book Now",
   },
   {
-    image: "../../public/hero_img2.png",
+    image: "/hero_img2.png",
     title: "PAIN RELIEF",
     subtitle: "TREATMENT",
     buttonText: "Book Now",
   },
   {
-    image: "../../public/hero_img3.png",
+    image: "/hero_img3.png",
     title: "EXPERT",
     subtitle: "CONSULTATION",
     buttonText: "Book Now",
