@@ -12,19 +12,22 @@ import { motion, useAnimation } from "framer-motion";
 
 const slides = [
   {
-    image: "/heroimg.png",
+    image:
+      "https://drive.google.com/file/d/1B2CTss5PQdAouPv4p16AUwWlRYH0MxD3/view?usp=sharing",
     title: "PHYSIOTHERAPY",
     subtitle: "ASSESSSMENT",
     buttonText: "Book Now",
   },
   {
-    image: "/heroimg2.png",
+    image:
+      "https://drive.google.com/file/d/1Sc-2aDpYMNN_UGppWh_pqMKgle9BL5r9/view?usp=sharing",
     title: "PAIN RELIEF",
     subtitle: "TREATMENT",
     buttonText: "Book Now",
   },
   {
-    image: "/heroimg3.png",
+    image:
+      "https://drive.google.com/file/d/1iu7hMl_M6nNFGrHDhD_1F-S2DGANzot4/view?usp=sharing",
     title: "EXPERT",
     subtitle: "CONSULTATION",
     buttonText: "Book Now",
