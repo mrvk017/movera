@@ -12,19 +12,19 @@ import { motion, useAnimation } from "framer-motion";
 
 const slides = [
   {
-    image: "/hero_img.png",
+    image: "/heroimg.png",
     title: "PHYSIOTHERAPY",
     subtitle: "ASSESSSMENT",
     buttonText: "Book Now",
   },
   {
-    image: "/hero_img2.png",
+    image: "/heroimg2.png",
     title: "PAIN RELIEF",
     subtitle: "TREATMENT",
     buttonText: "Book Now",
   },
   {
-    image: "/hero_img3.png",
+    image: "/heroimg3.png",
     title: "EXPERT",
     subtitle: "CONSULTATION",
     buttonText: "Book Now",
