@@ -19,7 +19,7 @@ const Header = () => {
               <img
                 src="/logo1.png"
                 alt="Miss Spa Logo"
-                className="h-14 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
             <NavLinkWithImage to="/aboutUs" label="About us" image="/powCopy.png" />

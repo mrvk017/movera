@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import HeadingText from './HeadingText';
 
 const OfferSection = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -107,7 +108,7 @@ const OfferSection = () => {
             {/* Header */}
             <div>
               <h2 className="text-4xl md:text-5xl font-light text-gray-800 tracking-wider mb-4 leading-tight">
-                OFFER OF THE DAY
+                <HeadingText heading="OFFER OF THE DAY" />
               </h2>
               <h3 className="text-2xl font-medium text-gray-700 mb-6">
                 35% off on Selected Products

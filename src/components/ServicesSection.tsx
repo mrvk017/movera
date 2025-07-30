@@ -1,7 +1,8 @@
-import React from "react";
-import { ArrowUp } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import HeadingText from "./HeadingText";
 
 const ServicesSection = () => {
+
   const services = [
     {
       title: "Postural & Spinal Alignment Therapy",
@@ -54,11 +55,13 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm text-gray-500 uppercase tracking-wider mb-4">
-            AFFORDABLE MOVEDOC PHYSIOTHERAPY 
+            AFFORDABLE MOVEDOC PHYSIOTHERAPY
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-800 tracking-wider mb-8">
+          {/* <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-800 tracking-wider mb-8">
             COMPLETE WELLNESS
-          </h2>
+          </h2> */}
+          <HeadingText heading="COMPLETE WELLNESS" />
+
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Eros donec ac odio tempor. Id interdum velit laoreet id donec
             ultrices tincidunt arcu non. Viverra orci sagittis volutpat.
@@ -83,10 +86,10 @@ const ServicesSection = () => {
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-12 h-12 rounded-full shadow-lg flex items-center justify-center">
                     <img
-                    src="/powCopy.png"
-                    alt={'pow'}
-                    className="w-full h-full object-cover transparent"
-                  />
+                      src="/powCopy.png"
+                      alt={"pow"}
+                      className="w-full h-full object-cover transparent"
+                    />
                   </div>
                 </div>
               </div>

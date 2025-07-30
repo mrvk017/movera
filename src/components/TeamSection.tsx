@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
+import HeadingText from "./HeadingText";
 
 interface TeamMember {
   id: number;
@@ -140,7 +141,7 @@ const TeamSection = () => {
             Our Team
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-sage-800 mb-8 tracking-wide">
-            Meet Certified Therapist
+            <HeadingText heading="Meet Certified Therapist" />
           </h2>
           <div className="max-w-2xl mx-auto">
             <p className="text-gray-700 text-lg leading-relaxed mb-4">

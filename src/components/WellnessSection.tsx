@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Heart, Globe, Zap, Smile, MessageCircle, Phone } from "lucide-react";
 import RotatingPlayButton from "./RotatingPlayButton";
 import YouTube from "react-youtube";
 import ParallaxBackground from "./ParallaxBackground";
+import HeadingText from "./HeadingText";
 
 const WellnessSection = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const benefits = [
     {
       icon: Heart,
@@ -24,6 +26,7 @@ const WellnessSection = () => {
       title: "Lifts Mood & Improves Energy",
     },
   ];
+
 
   useEffect(() => {
     if (isOpen) {
@@ -106,9 +109,10 @@ const WellnessSection = () => {
                 Your Body, Your Healing Partner
               </p>
               <h2 className="text-4xl md:text-5xl font-light text-gray-800 tracking-wider mb-6 leading-tight">
-                REBUILDING YOUR STRENGTH & PEACE OF
+                {/* REBUILDING YOUR STRENGTH & PEACE OF MIND */}
+                <HeadingText heading='REBUILDING YOUR STRENGTH & PEACE OF MIND' />
                 {/* <br /> */}
-                <span className="text-emerald-600">MIND</span>
+                {/* <span className="text-emerald-600">MIND</span> */}
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
                 At Movera, we focus on real healing — not just temporary relief.

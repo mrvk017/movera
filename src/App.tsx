@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -11,8 +11,14 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import CustomCursor from "./CustomCursor";
 import TeamSection from "./components/TeamSection";
+import LandingAnimation from "./components/LandingAnimation";
 
 function App() {
+  const [showLanding, setShowLanding] = useState(true);
+
+  if (showLanding)
+    return <LandingAnimation onComplete={() => setShowLanding(false)} />;
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">

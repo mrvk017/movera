@@ -1,28 +1,34 @@
-import React from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Tilt from "react-parallax-tilt";
+import HeadingText from "./HeadingText";
 
 const TreatmentsSection = () => {
   const treatments = [
     {
       title: "STONE MASSAGE",
-      image: "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      price: "$150.00"
+      image:
+        "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      price: "$150.00",
     },
     {
       title: "STRESS CONTROLLED",
-      image: "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      price: "$50.00"
+      image:
+        "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      price: "$50.00",
     },
     {
       title: "IMMUNE BOOST",
-      image: "https://images.pexels.com/photos/5240446/pexels-photo-5240446.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      price: "$65.00"
+      image:
+        "https://images.pexels.com/photos/5240446/pexels-photo-5240446.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      price: "$65.00",
     },
     {
       title: "CUPPING TREAT",
-      image: "https://images.pexels.com/photos/5240447/pexels-photo-5240447.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      price: "$99.00"
-    }
+      image:
+        "https://images.pexels.com/photos/5240447/pexels-photo-5240447.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      price: "$99.00",
+    },
   ];
 
   return (
@@ -42,7 +48,7 @@ const TreatmentsSection = () => {
             Come & Explore
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-700 tracking-wider mb-8">
-            MASSAGE & TREATMENTS
+            <HeadingText heading="MASSAGE & TREATMENTS" />
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
             Elit scelerisque mauris pellentesque pulvinar pellentesque habitant.
@@ -64,29 +70,38 @@ const TreatmentsSection = () => {
         {/* Treatments Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {treatments.map((treatment, index) => (
-            <div key={index} className="text-center group">
-              {/* Treatment Image */}
-              <div className="relative mb-6">
-                <div className="w-full h-64 rounded-3xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src={treatment.image}
-                    alt={treatment.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+            <Tilt
+              key={index}
+              glareEnable={true}
+              glareMaxOpacity={0.15}
+              scale={1.02}
+              transitionSpeed={700}
+              className="rounded-2xl"
+            >
+              <div key={index} className="text-center group">
+                {/* Treatment Image */}
+                <div className="relative mb-6">
+                  <div className="w-full h-64 rounded-3xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                    <img
+                      src={treatment.image}
+                      alt={treatment.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+
+                {/* Treatment Content */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-light text-gray-700 tracking-wide">
+                    {treatment.title}
+                  </h3>
+
+                  <p className="text-2xl font-medium text-gray-800">
+                    {treatment.price}
+                  </p>
                 </div>
               </div>
-
-              {/* Treatment Content */}
-              <div className="space-y-3">
-                <h3 className="text-xl font-light text-gray-700 tracking-wide">
-                  {treatment.title}
-                </h3>
-                
-                <p className="text-2xl font-medium text-gray-800">
-                  {treatment.price}
-                </p>
-              </div>
-            </div>
+            </Tilt>
           ))}
         </div>
       </div>
