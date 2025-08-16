@@ -22,10 +22,10 @@ const Header = () => {
                 className="h-16 w-auto"
               />
             </Link>
+            <NavLinkWithImage to="/home" label="Home" image="/powCopy.png" />
+            {/* <NavLinkWithImage to="/services" label="Services" image="/powCopy.png" /> */}
+            <NavLinkWithImage to="/shop" label="Shop" image="/powCopy.png" />
             <NavLinkWithImage to="/aboutUs" label="About us" image="/powCopy.png" />
-            <NavLinkWithImage to="/services" label="Services" image="/powCopy.png" />
-            <NavLinkWithImage to="/Pages" label="Pages" image="/powCopy.png" />
-            <NavLinkWithImage to="/blog" label="Blog" image="/powCopy.png" />
             <NavLinkWithImage to="/contactUs" label="Contact Us" image="/powCopy.png" />
 
             {/* <Link
@@ -101,12 +101,12 @@ const Header = () => {
               >
                 About us
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-700 hover:text-emerald-600 transition-colors"
               >
                 Services
-              </a>
+              </a> */}
               <a
                 href="#"
                 className="text-gray-700 hover:text-emerald-600 transition-colors"

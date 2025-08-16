@@ -8,25 +8,25 @@ const ProductsSection = () => {
       title: "ALOE VERA MASSAGE CREAM",
       image:
         "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      priceRange: "$7.86 - $7.96",
+      priceRange: "₹7.86 - ₹7.96",
     },
     {
       title: "FACIAL MASSAGE CREAM",
       image:
         "https://images.pexels.com/photos/6663574/pexels-photo-6663574.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      priceRange: "$8.20 - $8.69",
+      priceRange: "₹8.20 - ₹8.69",
     },
     {
       title: "GLOW FACIAL CREAM",
       image:
         "https://images.pexels.com/photos/3757941/pexels-photo-3757941.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      priceRange: "$8.95 - $9.20",
+      priceRange: "₹8.95 - ₹9.20",
     },
     {
       title: "HAIR MASSAGE OIL",
       image:
         "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      priceRange: "$6.25 - $6.45",
+      priceRange: "₹6.25 - ₹6.45",
     },
   ];
 

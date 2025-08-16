@@ -9,25 +9,25 @@ const TreatmentsSection = () => {
       title: "STONE MASSAGE",
       image:
         "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      price: "$150.00",
+      price: "₹150.00",
     },
     {
       title: "STRESS CONTROLLED",
       image:
         "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      price: "$50.00",
+      price: "₹50.00",
     },
     {
       title: "IMMUNE BOOST",
       image:
         "https://images.pexels.com/photos/5240446/pexels-photo-5240446.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      price: "$65.00",
+      price: "₹65.00",
     },
     {
       title: "CUPPING TREAT",
       image:
         "https://images.pexels.com/photos/5240447/pexels-photo-5240447.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      price: "$99.00",
+      price: "₹99.00",
     },
   ];
 

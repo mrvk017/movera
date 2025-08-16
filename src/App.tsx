@@ -12,6 +12,8 @@ import AboutUs from "./components/AboutUs";
 import CustomCursor from "./CustomCursor";
 import TeamSection from "./components/TeamSection";
 import LandingAnimation from "./components/LandingAnimation";
+import ContactUs from "./components/ContactUs";
+import Shop from "./components/Shop";
 
 function App() {
   const [showLanding, setShowLanding] = useState(true);
@@ -54,6 +56,8 @@ function App() {
             }
           />
           <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contactUs" element={<ContactUs />} />
         </Routes>
         <Footer />
       </div>

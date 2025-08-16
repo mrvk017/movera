@@ -13,21 +13,21 @@ import { motion, useAnimation } from "framer-motion";
 const slides = [
   {
     image:
-      "https://drive.google.com/file/d/1B2CTss5PQdAouPv4p16AUwWlRYH0MxD3/view?usp=sharing",
+      "./heroimg.png",
     title: "PHYSIOTHERAPY",
     subtitle: "ASSESSSMENT",
     buttonText: "Book Now",
   },
   {
     image:
-      "https://drive.google.com/file/d/1Sc-2aDpYMNN_UGppWh_pqMKgle9BL5r9/view?usp=sharing",
+      "heroimg2.png",
     title: "PAIN RELIEF",
     subtitle: "TREATMENT",
     buttonText: "Book Now",
   },
   {
     image:
-      "https://drive.google.com/file/d/1iu7hMl_M6nNFGrHDhD_1F-S2DGANzot4/view?usp=sharing",
+      "heroimg3.png",
     title: "EXPERT",
     subtitle: "CONSULTATION",
     buttonText: "Book Now",
@@ -166,32 +166,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-{
-  /* Curved Speech Bubble */
-}
-{
-  /* <div className="absolute top-1/4 left-20 hidden lg:block">
-  <div className="relative">
-    <div className="w-32 h-20 bg-white rounded-full flex items-center justify-center shadow-lg">
-      <span className="text-gray-700 text-sm font-medium">Relax & Unwind</span>
-    </div>
-    <div className="absolute -bottom-2 left-8 w-4 h-4 bg-white transform rotate-45"></div>
-  </div>
-</div> */
-}
-
-{
-  /* Floating Decorative Circles */
-}
-{
-  /* <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute top-20 left-10 w-4 h-4 bg-white/60 rounded-full animate-pulse"></div>
-                  <div className="absolute top-40 left-32 w-6 h-6 bg-white/40 rounded-full animate-pulse delay-300"></div>
-                  <div className="absolute top-60 right-20 w-5 h-5 bg-white/50 rounded-full animate-pulse delay-700"></div>
-                  <div className="absolute bottom-40 left-20 w-8 h-8 bg-white/30 rounded-full animate-pulse delay-1000"></div>
-                  <div className="absolute bottom-60 right-40 w-3 h-3 bg-white/60 rounded-full animate-pulse delay-500"></div>
-                  <div className="absolute top-1/3 right-10 w-7 h-7 bg-white/35 rounded-full animate-pulse delay-200"></div>
-                  <div className="absolute top-32 left-1/4 w-20 h-20 bg-white/10 rounded-full animate-pulse delay-800"></div>
-                  <div className="absolute bottom-32 right-1/4 w-16 h-16 bg-white/15 rounded-full animate-pulse delay-600"></div>
-                  </div> */
-}
